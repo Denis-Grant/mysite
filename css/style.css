@@ -110,9 +110,12 @@ header {
 
 #services {
   background-color: #38362f;
-  padding-top: 0; }
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .services {
+  width: 70%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column; }
   .services__img img {
@@ -121,6 +124,7 @@ header {
     object-fit: cover;
     display: block; }
   .services__type {
+    min-width: 250px;
     background-color: #fff; }
     .services__type__box {
       padding: 24px; }
@@ -132,6 +136,8 @@ header {
     .services__type__para {
       line-height: 24px;
       font-weight: 300; }
+  .services__img img {
+    width: 100%; }
 
 @media (min-width: 768px) {
   header {
@@ -142,7 +148,14 @@ header {
     display: flex;
     justify-content: space-between; }
     .solutions__footer__col {
-      margin-right: 24px; } }
+      margin-right: 24px; }
+  .services {
+    flex-direction: row;
+    width: 90%; }
+    .services__img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; } }
 
 @media (min-width: 992px) {
   ul.nav__menu {
