@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 $black: #1a1a1a;
+$grey: #9898A0;
 * {
     // border: 1px dotted salmon;
 }
@@ -113,6 +114,7 @@ header {
     }
 
     &__body {
+        max-width: 670px;
         &__para {
             line-height: 24px;
             font-weight: 300;
@@ -163,14 +165,20 @@ header {
     &__type {
         background-color: #fff;
         &__box {
-            padding: 18px;
+            padding: 24px;
+        }
+        &__icon {
+            font-size: 32px;
+            color: $grey;
+        }
+        &__heading {
+            color: $black;
         }
         &__para {
             line-height: 24px;
             font-weight: 300;
         }
-    }
-    
+    }    
 }
 
 @media (min-width: 576px){

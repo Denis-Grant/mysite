@@ -83,15 +83,17 @@ header {
   .solutions__header h2 {
     font-weight: 900;
     font-size: 38px; }
-  .solutions__body__para {
-    line-height: 24px;
-    font-weight: 300; }
-  .solutions__body__btn {
-    display: inline-block;
-    border-bottom: 4px solid;
-    padding-bottom: 3px;
-    letter-spacing: 1px;
-    font-weight: 300; }
+  .solutions__body {
+    max-width: 670px; }
+    .solutions__body__para {
+      line-height: 24px;
+      font-weight: 300; }
+    .solutions__body__btn {
+      display: inline-block;
+      border-bottom: 4px solid;
+      padding-bottom: 3px;
+      letter-spacing: 1px;
+      font-weight: 300; }
   .solutions__footer {
     margin-top: 40px; }
     .solutions__footer__col__number {
@@ -121,7 +123,12 @@ header {
   .services__type {
     background-color: #fff; }
     .services__type__box {
-      padding: 18px; }
+      padding: 24px; }
+    .services__type__icon {
+      font-size: 32px;
+      color: #9898A0; }
+    .services__type__heading {
+      color: #1a1a1a; }
     .services__type__para {
       line-height: 24px;
       font-weight: 300; }
