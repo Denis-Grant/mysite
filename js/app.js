@@ -13,15 +13,16 @@ const sidebarMenu = document.querySelector('.sidebar-menu');
 const sidebarUL = document.querySelector('.sidebar-menu ul');
 
 
+sidebarUL.addEventListener('click',(()=>{
+    sidebarMenu.style.right = '-160px';
+    mobileIcon.classList.remove('hide');
+
+}));
 
 mobileIcon.addEventListener('click',()=> {
     // hide hambuger menu
     mobileIcon.classList.add('hide');
-    // scroll in sidemenu
     sidebarMenu.style.right = 0;
-    // sidebarMenu.style.display = 'block';
-    // sidebarMenu.classList.remove('hide');
-
 
     const listItemsCount = navMenuList.childElementCount - 1;
     sidebarUL.innerHTML = '';
@@ -30,15 +31,8 @@ mobileIcon.addEventListener('click',()=> {
         sidebarUL.innerHTML += `<li><a href='${menuLinks[i].href}'>${navMenuList.children[i].textContent}</a></li>`
 
     }
-
-
-    
-
 });
 sidebarMenu.addEventListener('mouseleave',()=>{
     sidebarMenu.style.right = '-160px';
-    // sidebarMenu.classList.add('hide');
-    // mobileIcon.classList.remove('hide');
     mobileIcon.classList.remove('hide');
-
 });
