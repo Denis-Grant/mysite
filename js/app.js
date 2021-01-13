@@ -11,7 +11,7 @@ const mobileIcon = document.querySelector('.nav__mobile-icon');
 const navMenuList = document.querySelector('.nav__menu');
 const sidebarMenu = document.querySelector('.sidebar-menu');
 const sidebarUL = document.querySelector('.sidebar-menu ul');
-
+const closeSidebar = document.querySelector('.sidebar-menu--close');
 
 sidebarUL.addEventListener('click',(()=>{
     sidebarMenu.style.right = '-160px';
@@ -36,3 +36,8 @@ sidebarMenu.addEventListener('mouseleave',()=>{
     sidebarMenu.style.right = '-160px';
     mobileIcon.classList.remove('hide');
 });
+
+closeSidebar.addEventListener('click', ()=>{
+    sidebarMenu.style.right = '-160px';
+    mobileIcon.classList.remove('hide');
+})
