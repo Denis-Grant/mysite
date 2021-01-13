@@ -1,93 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
-
-$black: #373433;
-$gold: #B98F58;
-* {
-    // border: 1px solid pink;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+    overflow-x: hidden;
 }
-body {
+body { 
     font-family: Lato, sans-serif;
-
-
-
-           img {
-               transform: rotate(-90deg);
-               margin-right: 130px;
-               max-width: 64px;
-               height: auto;
-           }
-            nav {
-                flex-grow: 1;
-                a {
-                    font-size: 16px;
-                    font-weight: 300;
-                    color: black;
-                    border-top: 1px solid $black;
-                    margin-right: 50px;
-                    line-height: 28px;
-                    &.nav-link {
-                        padding-left: 0;
-                        
-                    }
-                
-                    &:hover, &.nav-link.active  {
-                        color: goldenrod;
-                        border-top: 4px solid $gold;
-                        padding-top: 5px;
-                    }
-                }
-            }
-            span {
-                display: block;
-                font-weight: 300;
-                font-size: 12px;
-                transform: rotate(-270deg);
-                word-spacing: 10px;
-                letter-spacing: 3px;
-                padding-left: 80px;
-                width: 230px;
-            }
-       
-    //    .nav-container {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     img {
-    //         transform: rotate(-90deg);
-    //         margin-right: 130px;
-    //         max-width: 64px;
-    //         height: auto;
-    //     }
-    //      nav {
-    //          flex-grow: 1;
-    //          a {
-    //              font-size: 16px;
-    //              font-weight: 300;
-    //              color: black;
-    //              border-top: 1px solid $black;
-    //              margin-right: 50px;
-    //              line-height: 28px;
-    //              &.nav-link {
-    //                  padding-left: 0;
-                     
-    //              }
-             
-    //              &:hover, &.nav-link.active  {
-    //                  color: goldenrod;
-    //                  border-top: 4px solid $gold;
-    //                  padding-top: 5px;
-    //              }
-    //          }
-    //      }
-    //      span {
-    //          font-weight: 300;
-    //          font-size: 12px;
-    //          transform: rotate(-270deg);
-    //          word-spacing: 10px;
-    //          letter-spacing: 3px;
-    //          padding-left: 60px;
-    //      }
-    // }
+    margin: 0;
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .hide {
+        display: none;
+    }
+    .gap {
+        height: 1000px;
+    }
 }
 header {
-        margin-top: 5rem;
+    background: url(../img/hero-img.png) no-repeat;
+    background-size: cover;
+    background-position: 6% 70%;
+    height: 525px;
+
+    nav {
+        position: fixed;
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        background-color: #00000014;
+        .sidebar-menu {
+            position: absolute;
+           
+            top:15px;
+            // height: 400px;
+            right:-160px;
+            transition: right 1s ease-in-out;
+            border-radius: 0 0 0 2px;
+            background-color: #000000ae;
+            color: #fff;
+            li {
+                padding: 10px 40px;
+            }
+        }
+        .nav {
+            
+            width: inherit;
+            display: flex;
+            justify-content: space-between;
+            &__logo {
+                color: #fff;
+                transition: color 300ms ease-in-out;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            &__menu {
+                display: none;
+            }
+            &__mobile-icon {
+                cursor: pointer;
+                    color: black;
+                    font-weight: bold; 
+            }
+        } /* nav */
+       
+    }
+    .cta {
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__block {
+        } 
+    }
+}
+
+@media (min-width: 576px){
+    
+}
+@media (min-width: 768px){
+    header {
+        background-position: 22% 70%;
+    }
+    }
+@media (min-width: 992px){
+    ul.nav__menu {
+        display: block;
+    }
+}
+@media (min-width: 1200px){
+    header .nav-wrapper .nav__logo {
+        color: black;
+    }
+}
+@media (min-width: 1400x){
+
 }
