@@ -1,13 +1,15 @@
+const nav = document.querySelector('nav');
+
 // Logo color change on scroll
 const navLogo = document.querySelector('.nav .nav__logo');
 window.addEventListener('scroll', ()=>{
     window.scrollY >  428 ? navLogo.style.color = '#1f1f1f' :
     navLogo.style.color = 'white';
 
-    // window.scrollY >  548 ? navLogo.style.backgroundColor = '#fff' :
+    // window.scrollY >  548 ? nav.style.backgroundColor = '#000' :
     // navLogo.style.backgroundColor = '#1f1f1f72';
     
-    // console.log(window.scrollY);
+    console.log(window.scrollY);
 });
 
 // Sidebar menu
