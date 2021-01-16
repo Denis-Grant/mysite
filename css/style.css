@@ -24,14 +24,19 @@ body {
     margin: 0 auto; }
   body .gap {
     height: 1000px; }
+  body .white-bg {
+    background-color: #fff; }
+  body .grey-bg {
+    background-color: #f3f3f3; }
 
 header {
-  background: url(../img/hero4mySite2.png) no-repeat;
+  background: url(../img/hero4mySite2.png);
   background-size: cover;
   background-position: 6% 70%;
   height: 525px; }
   header nav {
     position: fixed;
+    z-index: 100;
     width: 100%;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -45,10 +50,13 @@ header {
       right: -160px;
       transition: right 1s ease-in-out;
       border-radius: 0 0 0 2px;
-      background-color: #000000ae;
-      color: #fff; }
+      background-color: #000000be;
+      color: #d9d9d9; }
       header nav .sidebar-menu li {
         padding: 10px 40px; }
+        header nav .sidebar-menu li a:hover {
+          color: #fff;
+          font-weight: bold; }
       header nav .sidebar-menu--close {
         cursor: pointer;
         position: absolute;
@@ -75,6 +83,7 @@ header {
         color: black;
         font-weight: bold; }
 
+/* header end */
 .solutions {
   display: flex;
   flex-direction: column; }
@@ -84,6 +93,8 @@ header {
     font-weight: 900;
     font-size: 38px;
     color: #006266; }
+  .solutions__header h3 {
+    letter-spacing: 4px; }
   .solutions__body {
     max-width: 670px; }
     .solutions__body__para {
@@ -111,6 +122,7 @@ header {
     .solutions__footer__col__number {
       color: #006266; }
 
+/* solutions end */
 #services {
   background-color: #fff;
   padding-top: 0;
@@ -120,6 +132,26 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: column; }
+  .services__img {
+    position: relative; }
+    .services__img__overlay {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 15px;
+      align-items: center;
+      top: 88%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a1a1ad4;
+      color: #fff;
+      font-size: 24px; }
+      .services__img__overlay h3 {
+        padding: 15px 15px; }
+      .services__img__overlay i {
+        font-size: 30px;
+        transform: rotate(45deg); }
   .services__img img {
     width: 100%;
     height: 335px;
@@ -137,9 +169,54 @@ header {
       color: #1a1a1a; }
     .services__type__para {
       line-height: 24px;
-      font-weight: 300; }
+      font-weight: 300;
+      max-width: 410px; }
   .services__img img {
     width: 100%; }
+
+/* services end */
+/*  *EOF* */
+#portfolio {
+  margin-top: 100px;
+  background: linear-gradient(to right, #1C9186 0%, #1C9186 50%, #1C9186 50%, #1a1a1ad4 50%, #1a1a1ad4 100%); }
+  #portfolio .background {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: inherit; }
+    #portfolio .background .green-bg {
+      width: 50%;
+      background: #1C9186; }
+    #portfolio .background .black-bg {
+      width: 50%;
+      background: #1a1a1a; }
+
+.portfolio-wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+.portfolio {
+  position: relative;
+  z-index: 20;
+  display: grid;
+  padding: 20px 0;
+  margin-bottom: 20px; }
+  .portfolio__box i {
+    font-size: 36px;
+    padding: 10px; }
+  .portfolio__box h3 {
+    color: #1a1a1a;
+    font-size: 22px;
+    padding: 10px; }
+  .portfolio__box p {
+    line-height: 24px;
+    font-weight: 300;
+    padding: 10px; }
+  .portfolio__box img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%; }
 
 @media (min-width: 768px) {
   header {
@@ -156,6 +233,11 @@ header {
   .services {
     width: 90%;
     flex-direction: row; }
+    .services__img__overlay {
+      top: 90%;
+      justify-content: space-between; }
+      .services__img__overlay i {
+        transform: rotate(270deg); }
     .services__img img {
       width: 100%;
       height: 100%;
@@ -169,7 +251,9 @@ header {
       .services__type__para:nth-child(3) {
         margin-bottom: 4px; }
       .services__type__box:nth-child(1) {
-        padding-top: 4px; } }
+        padding-top: 4px; }
+  .portfolio {
+    grid-template-columns: 1fr 1fr; } }
 
 @media (min-width: 992px) {
   header {
@@ -199,4 +283,19 @@ header {
   header .nav-wrapper .nav__logo {
     color: black; }
   #solutions {
-    margin-bottom: 150px; } }
+    margin-bottom: 150px; }
+  .portfolio {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1400x) {
+  header {
+    background-position-y: 70%; } }
+
+.fade-in {
+  animation: fadeIn ease-in-out 3s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
