@@ -176,28 +176,43 @@ header {
 
 /* services end */
 /*  *EOF* */
-#portfolio {
+section#portfolio {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
   margin-top: 100px;
   background: linear-gradient(to right, #1C9186 0%, #1C9186 50%, #1C9186 50%, #1a1a1ad4 50%, #1a1a1ad4 100%); }
-  #portfolio .background {
-    z-index: 1;
+  section#portfolio .background {
     display: flex;
     width: 100%;
     height: inherit; }
-    #portfolio .background .green-bg {
+    section#portfolio .background .green-bg {
       width: 50%;
       background: #1C9186; }
-    #portfolio .background .black-bg {
+    section#portfolio .background .black-bg {
       width: 50%;
-      background: #1a1a1a; }
+      background: #1a1a1ad4; }
+      section#portfolio .background .black-bg h3 {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #fff;
+        font-size: 30px;
+        margin: 0 0; }
+      section#portfolio .background .black-bg i {
+        position: absolute;
+        top: 20px;
+        left: 52%;
+        color: #fff;
+        font-size: 30px;
+        margin: 0 0; }
 
 .portfolio-wrapper {
-  width: 80%;
+  width: 75%;
   margin: 0 auto; }
 
 .portfolio {
   position: relative;
-  z-index: 20;
   display: grid;
   padding: 20px 0;
   margin-bottom: 20px; }
@@ -217,6 +232,8 @@ header {
     display: block;
     object-fit: cover;
     height: 100%; }
+  .portfolio .bg-color {
+    background-color: #fff; }
 
 @media (min-width: 768px) {
   header {
@@ -237,7 +254,7 @@ header {
       top: 90%;
       justify-content: space-between; }
       .services__img__overlay i {
-        transform: rotate(270deg); }
+        transform: rotate(220deg); }
     .services__img img {
       width: 100%;
       height: 100%;
@@ -252,8 +269,12 @@ header {
         margin-bottom: 4px; }
       .services__type__box:nth-child(1) {
         padding-top: 4px; }
+  section#portfolio {
+    width: 90%; }
   .portfolio {
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+    .portfolio .bg-color {
+      background-color: #f3f3f3; } }
 
 @media (min-width: 992px) {
   header {
@@ -285,7 +306,11 @@ header {
   #solutions {
     margin-bottom: 150px; }
   .portfolio {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+    .portfolio__box img {
+      border-right: 1px solid #9898A0; }
+    .portfolio .bg-color {
+      background-color: #fff; } }
 
 @media (min-width: 1400x) {
   header {
