@@ -63,3 +63,10 @@ window.addEventListener('resize', ()=>{
     }
     console.log(portfolio.clientWidth)
 });
+
+const parallax = document.getElementById('parallax');
+
+window.addEventListener('scroll', ()=>{
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `${offset * 0.6}px`;
+});

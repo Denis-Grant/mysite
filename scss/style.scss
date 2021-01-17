@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 $black: #1a1a1a;
 $grey: #9898A0;
-$primary: #006266;
+$primary: #1C9186;
 $light-grey: #f3f3f3;
 * {
     // border: 1px dotted salmon;
@@ -137,7 +137,7 @@ header {
         }
         &__btn {
             display: inline-block;
-            border-bottom: 4px solid ;
+            border-bottom: 4px solid #e67e22 ;
             padding-bottom: 3px;
             letter-spacing: 1px;
             font-weight: 300;
@@ -190,7 +190,7 @@ header {
             bottom: 0;
             left: 0;
             right: 0;
-            background: #1a1a1ad4;
+            background: #e67e22f2;
             // background: #1a1a1ad4;
             color: #fff;
             font-size: 24px;
@@ -218,7 +218,7 @@ header {
         }
         &__icon {
             font-size: 32px;
-            color: $grey;
+            color: #e67e22;
         }
         &__heading {
             color: $black;
@@ -257,7 +257,7 @@ section#portfolio {
             h3, {
                 position: absolute;
                 top: 15px;
-                right: 15px;
+                left: 15px;
                 color: #fff;
                 font-size: 30px;
                 margin: 0 0;
@@ -287,17 +287,17 @@ section#portfolio {
  
             i {
                 font-size: 36px;
-                padding: 10px;
+                padding: 15px;
             }
             h3 {
-                color: $black;
+                color: $primary;
                 font-size: 22px;
-                padding: 10px;
+                padding-left: 15px;
             }
             p {
                 line-height: 24px;
                 font-weight: 300;
-                padding: 10px;
+                padding: 15px;
             }
             img {
                 width: 100%;
@@ -350,6 +350,9 @@ section#portfolio {
            img {
             width: 100%;
             height: 100%;
+            max-width: 960px;
+            // min-width: 800px;
+
             object-fit: cover;
            
            }
@@ -358,6 +361,7 @@ section#portfolio {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            max-width: 300px;
             &__box {
                 padding-bottom: 0;
             }
