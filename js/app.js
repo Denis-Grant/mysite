@@ -48,25 +48,27 @@ closeSidebar.addEventListener('click', ()=>{
 
 const portfolio = document.getElementById('portfolio');
 const tog = document.querySelector('.toggle');
-window.addEventListener('resize', ()=>{
-    if (portfolio.clientWidth > 1) {
-        // tog.classList.add('white-bg');
-        tog.classList.toggle('toggle');
-    } else
-    if (portfolio.clientWidth >  768) {
-        tog.classList.toggle('toggle');
-        // tog.classList.remove('white-bg');
-    } else
-    if (portfolio.clientWidth > 1200) {
-        tog.classList.add('white-bg');
-        tog.classList.remove('grey-bg');
-    }
-    console.log(portfolio.clientWidth)
-});
+// window.addEventListener('resize', ()=>{
+//     if (portfolio.clientWidth > 1) {
+//         // tog.classList.add('white-bg');
+//         tog.classList.toggle('toggle');
+//     } else
+//     if (portfolio.clientWidth >  768) {
+//         tog.classList.toggle('toggle');
+//         // tog.classList.remove('white-bg');
+//     } else
+//     if (portfolio.clientWidth > 1200) {
+//         tog.classList.add('white-bg');
+//         tog.classList.remove('grey-bg');
+//     }
+//     console.log(portfolio.clientWidth)
+// });
 
 const parallax = document.getElementById('parallax');
-
+// parallax.style.transitionProperty = `background-position`;
+// parallax.style.transition = '.15s ease-in-out';
 window.addEventListener('scroll', ()=>{
     let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = `${offset * 0.6}px`;
+
+    parallax.style.backgroundPositionY = `${offset * 0.7}px`;
 });
